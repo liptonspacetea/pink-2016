@@ -1,0 +1,20 @@
+$color: red;
+$font-color: silver;
+
+.test {
+    color: $font-color;
+    background-color: $color;
+    text-transform: uppercase;
+    font-weight: bold;
+};
+p {
+    color: $font-color;
+    font-size: 20px;
+}
+b {
+    color: green;
+}
+h2 {
+    color: aqua;
+    text-transform: uppercase;
+}
