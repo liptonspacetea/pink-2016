@@ -1,0 +1,12 @@
+@mixin center-container {
+    width: 280px;
+    margin: 0 auto;
+    
+    @media screen and ($tablet-width) {
+        width: 620px;
+    }
+    
+    @media screen and ($desktop-width) {
+        width: 940px;
+    }
+}
