@@ -2,6 +2,7 @@
 
 *.psd
 
+*.log
 css/*.css
 
 node_modules/

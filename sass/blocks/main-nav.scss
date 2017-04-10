@@ -1,0 +1,116 @@
+.main-nav {
+    position: sticky;
+    top: 0;
+//    width: 100%;
+    min-height: 66px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.main-nav input[type="checkbox"] {
+    display: none;
+}
+.main-nav__toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    display: block;
+    width: 50px;
+    height: 24px;
+    cursor: pointer;
+    overflow: hidden;
+    
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 4px;
+        background-color: #ffffff;
+        transition: 0.4s;
+    }
+    &::before {
+        box-shadow: 0 10px 0 #ffffff;
+    }
+    
+    &::after {
+        bottom: 0;
+    }
+    
+    &:hover::before,
+    &:hover::after {
+        background-color: $pink;
+    }
+    
+    &:hover::before {
+        box-shadow: 0 10px 0 $pink;
+    }
+    
+    &:active::before,
+    &:active::after {
+        background-color: #431120;
+    }
+    
+    &:active::before {
+        box-shadow: 0 10px 0 #431120;
+    }
+    
+}
+#main-nav-checkbox:checked ~ .main-nav__toggle {
+    &::before,
+    &::after {
+//        top: 10px;
+//        right: 0;
+        width: 30px;
+//        transform: translateY(10px);
+//        transition: ease-in-out 0.4s;
+    }
+    &::before {
+        box-shadow: 200px 0 0 $pink;
+        transform: translate(20px, 10px) rotate(45deg);
+    }
+    
+    &::after {
+        transform: translate(20px, -10px) rotate(-45deg);
+    }
+}
+.main-nav__items {
+    position: absolute;
+    top: -330px;
+    margin: 0;
+    padding: 0;
+    padding-top: 66px;
+    width: 100%;
+    list-style: none;
+    background-color: $menu-bg-color;
+    border-top: 1px solid #000000;
+//    transform: translateY(-330px);
+    transition: transform 0.4s;
+}
+.main-nav__item {
+    font-weight: 700;
+    
+    a {
+        display: block;
+        padding: 15px;
+        font-size: $font-size-medium;
+        line-height: 32px;
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-top: 1px solid #485461;
+        border-bottom: 1px solid #000000;
+        cursor: default;
+    }
+    
+    a[href] {
+        cursor: pointer;
+    }
+}
+.main-nav__item:first-child {
+    box-shadow: 0 -1px 0 #000000;
+}
+#main-nav-checkbox:checked ~ .main-nav__items {
+    transform: translateY(330px);
+}
+

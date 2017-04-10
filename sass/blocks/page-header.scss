@@ -1,0 +1,19 @@
+.page-header {
+    max-width: 700px;
+    height: 730px;
+    margin: 0 auto;
+    background: $mobile-page-header-bg url(../img/bg-back-mobile@1x.jpg) no-repeat center 0px;
+}
+.page-header__logo {
+    position: fixed;
+    top: 20px;
+    padding-left: 20px;
+    z-index: 2;
+}
+.page-header__logo img {
+    width: 75px;
+    height: 23px;
+}
+.page-header__download-section {
+
+}
