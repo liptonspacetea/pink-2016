@@ -1,7 +1,10 @@
 body {
+    min-width: 320px;
+//    width: 320px;//временно
+    margin: auto;//временно
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: $font-size-small;
-    line-height: 30px;
+    line-height: 24px;
     color: $text-color-main;
 }
 img {

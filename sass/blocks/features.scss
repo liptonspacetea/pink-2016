@@ -1,0 +1,31 @@
+.features {
+    position: relative;
+    padding: 80px 20px 320px;
+    background: {
+        color: $body-bg-second-color;
+        image: linear-gradient(to bottom right, #ffffff 50%, transparent 50%), url(../img/iphone-screen-mobile-cut@1x.png);
+        size: 100% 32px, 157px 277px;
+        position: right top, center bottom;
+        repeat: no-repeat;
+    }
+}
+.features__item {
+    margin-bottom: 32px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    h3 {
+        margin: 0;
+        margin-bottom: 12px;
+        font-size: $font-size-medium;
+        color: #000000;
+        text-align: center;
+    }
+    
+    p {
+        margin: 0;
+        text-align: center;
+    }
+}

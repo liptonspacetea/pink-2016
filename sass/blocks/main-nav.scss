@@ -1,8 +1,10 @@
 .main-nav {
-    position: sticky;
+    position: fixed;
     top: 0;
-//    width: 100%;
-    min-height: 66px;
+    z-index: 1;
+    width: inherit;
+    width: 100%;
+    min-height: 70px;
     background-color: rgba(0, 0, 0, 0.3);
 }
 .main-nav input[type="checkbox"] {
@@ -56,20 +58,15 @@
     
 }
 #main-nav-checkbox:checked ~ .main-nav__toggle {
-    &::before,
-    &::after {
-//        top: 10px;
-//        right: 0;
-        width: 30px;
-//        transform: translateY(10px);
-//        transition: ease-in-out 0.4s;
-    }
+    
     &::before {
+        width: 30px;
         box-shadow: 200px 0 0 $pink;
         transform: translate(20px, 10px) rotate(45deg);
     }
     
     &::after {
+        width: 30px;
         transform: translate(20px, -10px) rotate(-45deg);
     }
 }
@@ -78,16 +75,24 @@
     top: -330px;
     margin: 0;
     padding: 0;
-    padding-top: 66px;
+    padding-top: 70px;
     width: 100%;
     list-style: none;
     background-color: $menu-bg-color;
     border-top: 1px solid #000000;
-//    transform: translateY(-330px);
     transition: transform 0.4s;
 }
 .main-nav__item {
     font-weight: 700;
+    
+    &:first-child {
+        box-shadow: 0 -1px 0 #000000;
+    }
+    
+    &:active {
+        transform: scale(0.9);
+//        box-shadow: inset 0 0 10px #000000;
+    }
     
     a {
         display: block;
@@ -106,9 +111,6 @@
     a[href] {
         cursor: pointer;
     }
-}
-.main-nav__item:first-child {
-    box-shadow: 0 -1px 0 #000000;
 }
 #main-nav-checkbox:checked ~ .main-nav__items {
     transform: translateY(330px);
