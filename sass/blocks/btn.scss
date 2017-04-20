@@ -11,3 +11,14 @@
     border: 3px solid #ffffff;
     border-radius: 60px;
 }
+.btn--page-header-btn {
+    &:hover {
+        color: $pink;
+        background-color: #ffffff;
+    }
+    
+    &:active {
+        color: rgba(210, 40, 86, 0.3);
+        transform: scale(0.9);
+    }
+}

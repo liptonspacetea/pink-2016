@@ -1,0 +1,87 @@
+.slider {
+    position: relative; 
+    
+    input[type="radio"] {
+        display: none;
+    }
+}
+.slider__wrapper {
+    position: relative;
+    display: flex;
+    width: 300%;
+    transition: transform 0.4s;
+}
+.slider__slide {
+    position: absolute;
+    width: 33.3%;
+    
+    &-2 {
+        margin-left: 33.3%;
+    }
+    
+    &-3 {
+        margin-left: 66.6%;
+    }
+}
+.slider__controls {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(-50%);
+    min-width: 56px;
+//    background-color: rgba(0, 255, 0, 0.2);
+        
+    label {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: #bec2c7;
+        transition: transform 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.4);//потом убрать
+        }
+
+        &:active {
+            transform: scale(1.4);
+        }
+    }
+}
+.slider__controls--feedback {
+    bottom: -44px;
+}
+
+#slide-1:checked ~ .slider__wrapper {
+    transform: translateX(0);
+}
+#slide-1:checked ~ .slider__wrapper .slider__slide-1 {
+    position: static;
+}
+#slide-2:checked ~ .slider__wrapper {
+    transform: translateX(-33.3%);
+}
+#slide-2:checked ~ .slider__wrapper .slider__slide-2 {
+    position: static;
+}
+#slide-3:checked ~ .slider__wrapper {
+    transform: translateX(-66.6%);
+}
+#slide-3:checked ~ .slider__wrapper .slider__slide-3 {
+    position: static;
+}
+    
+#slide-1:checked ~ .slider__controls label[for="slide-1"],
+#slide-2:checked ~ .slider__controls label[for="slide-2"],
+#slide-3:checked ~ .slider__controls label[for="slide-3"] {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px $dark-blue;
+}
+    
+
+
+

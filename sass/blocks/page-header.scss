@@ -1,6 +1,7 @@
 .page-header {
     display: flex;
-//    width: 320px;//временно
+    justify-content: center;
+    width: 320px;//временно
     height: 733px;
     background: {
         color: $mobile-page-header-bg;
@@ -14,9 +15,10 @@
 .page-header__logo {
     position: fixed;
     top: 20px;
-//    left: 20px;
+    left: 20px;
+    left: 50%;//временно
+    margin-left: -140px;//временно
     z-index: 2;
-    padding-left: 20px;//временно
 }
 .page-header__logo img {
     width: 75px;
@@ -24,21 +26,10 @@
 }
 .page-header__download-section {
     align-self: flex-end;
-    margin: 0 auto;
+//    margin: 0 auto;//можно убрать, заменил флекс центровкой
     padding: 0 20px;//заменить миксином
     margin-bottom: 30px;
 //    background-color: red;//временно
-}
-.page-header__download-btn {
-    &:hover {
-        color: $pink;
-        background-color: #ffffff;
-    }
-    
-    &:active {
-        color: rgba(210, 40, 86, 0.3);
-        transform: scale(0.9);
-    }
 }
 .page-header__download-links {
     display: flex;

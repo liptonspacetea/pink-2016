@@ -2,21 +2,12 @@
     min-height: 2437px;//временно
     display: flex;
     flex-direction: column;
+//    background-color: rgba(0, 255, 0, 0.1);
 }
 .main-index__header {
     position: relative;
     padding: 0 20px;//заменить миксином
 //    background-color: rgba(255, 0, 0, 0.1);//временно
-    
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: -320px;
-        width: 320px;
-        height: 217px;
-        background-color: rgba(0, 255, 0, 0.1);
-    }
     
     h2 {
         margin: 0;
