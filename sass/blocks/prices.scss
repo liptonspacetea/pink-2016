@@ -1,0 +1,129 @@
+.prices {
+    position: relative;
+    min-height: 470px;
+//    padding: 0 20px;
+    padding-top: 90px;
+    box-sizing: border-box;
+    background: {
+        color: $body-bg-second-color;
+        image: linear-gradient(to bottom right, #ffffff 50%, transparent 50%);
+        size: 100% 22px;
+        repeat: no-repeat;
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        width: 320px;
+        height: 470px;
+        top: 0;
+        left: -320px;
+        background-color: rgba(0, 255, 0, 0.2);
+    }
+    
+    &::after {
+        content: "";
+        position: absolute;
+        width: 640px;
+        height: 20px;
+        top: 70px;
+        right: -640px;
+        background-color: rgba(255, 255, 0, 0.2);
+    }
+}
+.prices__table {
+//    background-color: rgba(0, 255, 0, 0.1);
+    border-collapse: collapse;
+    width: 300%;
+    background-color: #ffffff;
+    
+    td {
+//        width: 33.3%;
+        line-height: 30px;
+//        text-align: center;
+    }
+    
+    td:first-child {
+        display: none;
+    }
+    
+}
+.prices__table-header {
+    height: 92px;
+    font-size: $font-size-big;
+    font-weight: 300;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;//перевесить на td?
+    background-color: $prices-header-bg-color;
+    border: 2px solid $prices-header-bg-color;
+    border-left-color: $prices-border-color;
+    border-right-color: $prices-border-color;
+    
+    b {
+        display: block;
+        font-size: $font-size-medium;
+        font-weight: 700;
+    }
+}
+.prices__table-cell {
+    height: 57px;
+    border: 2px solid $prices-border-color;
+    
+    img[alt="Есть"] {
+        width: 31px;
+        height: 21px;
+        
+    }
+    
+    img[alt="Нет"] {
+        width: 27px;
+        height: 26px;
+        
+    }
+}
+.prices__cell-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 17px;
+//    background-color: rgba(255, 255, 0, 0.2);
+    
+    img {
+        flex-shrink: 0;
+    }
+    
+    img[alt="Нет"] {
+        margin-right: 2px;
+    }
+
+}
+.prices__cell-wrapper--filter-feature {
+    position: relative;
+    
+    &::before {
+        content: "Розовый фильтр";
+        text-transform: uppercase;
+    }
+    
+}
+.prices__cell-wrapper--smileys-feature {
+    position: relative;
+    
+    &::before {
+        content: "Смайлики";
+        text-transform: uppercase;
+    }
+    
+}
+.prices__cell-wrapper--comments-feature {
+    position: relative;
+    
+    &::before {
+        content: "Комментарии";
+        text-transform: uppercase;
+    }
+    
+}
+
