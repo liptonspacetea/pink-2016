@@ -1,13 +1,9 @@
 .main-index {
-    min-height: 2437px;//временно
-    display: flex;
-    flex-direction: column;
-//    background-color: rgba(0, 255, 0, 0.1);
+//    min-height: 3437px;//временно upd: плюсанул height на 1k
 }
 .main-index__header {
     position: relative;
     padding: 0 20px;//заменить миксином
-//    background-color: rgba(255, 0, 0, 0.1);//временно
     
     h2 {
         margin: 0;
@@ -15,7 +11,7 @@
         font-size: 24px;
         text-align: center;
         line-height: 28px;
-        
+       
         &:first-child {
             margin-top: 40px;
             margin-bottom: 34px;

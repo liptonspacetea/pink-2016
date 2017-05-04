@@ -1,37 +1,74 @@
 .feedback {
     position: relative;
-//    background-color: rgba(255, 0, 0, 0.1);
     padding-top: 42px;
-    padding-bottom: 90px;
-    overflow: hidden;//временно
+    text-align: center;
+}
+.feedback__main-title {
+    margin: 0;
+    margin-bottom: 33px;
+    font-size: $font-size-big;
+    font-weight: 300;
+    line-height: 28px;
+}
+.feedback__title {
+    display: block;
+    margin-bottom: 5px;
+    font-size: $font-size-medium;
+}
+.feedback__link {
+    display: block;
+    margin-bottom: 25px;
+    font-size: $font-size-big;
+    font-weight: 300;
+    color: $text-color-link;
+    text-decoration: none;
+}
+.feedback__text {
+    margin: 0;
+    margin-bottom: 38px;
+    padding: 0 20px;
+    font-size: $font-size-big;
+    font-weight: 300;
+    line-height: 30px;
+    color: $text-color-link;
+}
+.feedback__map {
+    position: relative;
+    height: 200px;
+//    display: flex;
+    
+    iframe {
+//        flex-grow: 1;
+    }
     
     &::before {
         content: "";
         position: absolute;
+        width: 50%;
+        height: 32px;
         top: 0;
-        left: 50px;
-        width: 320px;
-        height: 355px;
-//        background-color: rgba(0, 255, 0, 0.2);
+        left: 0;
+//        z-index: 10;
+//        background: {
+////            color: red;
+//            image: 
+//                linear-gradient(to bottom left, #ffffff 50%, transparent 50%),
+//                linear-gradient(to bottom right, #ffffff 50%, transparent 50%);
+//            size: 50% 32px, 50% 32px;;
+//            position: 0 0, 100% 0;
+//            repeat: no-repeat;
+//        }
+        background-image: linear-gradient(to bottom left, #ffffff 50%, transparent 50%);
     }
-}
-.feedback__item {
-//    background-color: rgba(255, 255, 0, 0.1);
-    text-align: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 32px;
+        background-image: linear-gradient(to bottom right, #ffffff 50%, transparent 50%);
+    }
 
-.feedback__comment-author {
-    display: block;
-    font-size: $font-size-medium;
-    line-height: 30px;
-//    background-color: rgba(255, 0, 0, 0.1);
-    margin-bottom: 15px;
-}
-.feedback__comment-text {
-//    background-color: rgba(0, 255, 255, 0.1);
-    margin: 0;
-    line-height: 30px;
-    font-size: $font-size-small;
 }

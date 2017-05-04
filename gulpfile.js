@@ -79,6 +79,12 @@ gulp.task("html:update", ["html:copy"], function(done) {
   done();
 });
 
+gulp.task("js", function() {
+   return gulp.src("js/*.js")
+       .pipe(gulp.dest("build/js"))
+       .pipe(server.stream());
+});
+
 gulp.task("serve", function() {
     server.init({
         server: "build",
@@ -90,6 +96,7 @@ gulp.task("serve", function() {
     
     gulp.watch("sass/**/*.scss", ["style"]);
     gulp.watch("*.html", ["html:update"]);
+    gulp.watch("js/*.js", ["js"]);
 });
 
 gulp.task("build", function(fn) {

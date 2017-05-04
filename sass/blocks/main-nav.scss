@@ -6,9 +6,11 @@
 //    width: 100%;
     min-height: 70px;
     background-color: rgba(0, 0, 0, 0.3);
-}
-.main-nav input[type="checkbox"] {
-    display: none;
+//    background-color: transparent;
+    
+    input[type="checkbox"] {
+        display: none;
+    }
 }
 .main-nav__toggle {
     position: absolute;

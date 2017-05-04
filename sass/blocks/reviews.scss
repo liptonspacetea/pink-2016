@@ -1,0 +1,27 @@
+.reviews {
+    padding-top: 42px;
+    padding-bottom: 90px;
+    min-height: 357px;//наверн лучше убрать
+    box-sizing: border-box;
+//    overflow: hidden;//временно
+}
+.reviews__item {
+//    background-color: rgba(255, 255, 0, 0.1);
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.reviews__comment-author {
+    display: block;
+    font-size: $font-size-medium;
+    line-height: 30px;
+//    background-color: rgba(255, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+.reviews__comment-text {
+//    background-color: rgba(0, 255, 255, 0.1);
+    margin: 0;
+    line-height: 30px;
+    font-size: $font-size-small;
+}

@@ -3,15 +3,16 @@
     padding: 14px;
     padding-bottom: 17px;
     text-align: center;
-    color: #ffffff;
     font-weight: 700;
     font-size: $font-size-medium;
     line-height: 18px;
     text-decoration: none;
-    border: 3px solid #ffffff;
     border-radius: 60px;
 }
-.btn--page-header-btn {
+.btn--download-btn {
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    
     &:hover {
         color: $pink;
         background-color: #ffffff;

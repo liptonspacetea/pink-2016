@@ -5,22 +5,69 @@
         display: none;
     }
 }
+.slider__btn {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 50%;
+    height: 100%;
+    
+    &--left {
+        left: 0;
+        background-color: rgba(0, 255, 0, 0.2);
+    }
+    
+    &--right {
+        right: 0;
+        background-color: rgba(255, 255, 0, 0.2);
+    }
+    
+    &--disable {
+        opacity: 0.1;
+    }
+}
 .slider__wrapper {
     position: relative;
-    display: flex;
+//    display: flex;
     width: 300%;
     transition: transform 0.4s;
+//    background-color: rgba(255, 0, 0, 0.2);
+    
+    &--show-slide-1 {
+        transform: translateX(0);
+    }
+    
+    &--show-slide-2 {
+        transform: translateX(-33.3%);
+    }
+    
+    &--show-slide-3 {
+        transform: translateX(-66.6%);
+    }
+    
+    &--reviews {
+//        min-height: 225px;//хз-хз
+    }
+    
+    &--prices {
+        width: 262.5%;
+    }
 }
 .slider__slide {
     position: absolute;
+    top: 0;
     width: 33.3%;
     
-    &-2 {
+    &--slide-2 {
         margin-left: 33.3%;
     }
     
-    &-3 {
+    &--slide-3 {
         margin-left: 66.6%;
+    }
+    
+    &--current {
+        position: static;
     }
 }
 .slider__controls {
@@ -38,7 +85,6 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        cursor: pointer;
         background-color: #bec2c7;
         transition: transform 0.2s;
         cursor: pointer;
@@ -51,33 +97,48 @@
 //            transform: scale(2.4);
         }
     }
-}
-.slider__controls--feedback {
-    bottom: -44px;
+    
+    &--reviews {
+        bottom: -44px;
+    }
+    
+    &--prices {
+        bottom: -49px;
+    }
 }
 
-#slide-1:checked ~ .slider__wrapper {
+#reviews-slide-1:checked ~ .slider__wrapper,
+#prices-slide-1:checked ~ .slider__wrapper {
     transform: translateX(0);
 }
-#slide-1:checked ~ .slider__wrapper .slider__slide-1 {
+#reviews-slide-1:checked ~ .slider__wrapper .slider__slide--slide-1 {
     position: static;
 }
-#slide-2:checked ~ .slider__wrapper {
-    transform: translateX(-33.3%);
+#reviews-slide-2:checked ~ .slider__wrapper {
+    transform: translateX(-33.3%);  
 }
-#slide-2:checked ~ .slider__wrapper .slider__slide-2 {
+#prices-slide-2:checked ~ .slider__wrapper--prices {
+    transform: translateX(-31%);
+}
+#reviews-slide-2:checked ~ .slider__wrapper .slider__slide--slide-2 {
     position: static;
 }
-#slide-3:checked ~ .slider__wrapper {
-    transform: translateX(-66.6%);
+#reviews-slide-3:checked ~ .slider__wrapper {
+    transform: translateX(-66.6%);  
 }
-#slide-3:checked ~ .slider__wrapper .slider__slide-3 {
+#prices-slide-3:checked ~ .slider__wrapper--prices {
+    transform: translateX(-62%);
+}
+#reviews-slide-3:checked ~ .slider__wrapper .slider__slide--slide-3 {
     position: static;
 }
     
-#slide-1:checked ~ .slider__controls label[for="slide-1"],
-#slide-2:checked ~ .slider__controls label[for="slide-2"],
-#slide-3:checked ~ .slider__controls label[for="slide-3"] {
+#reviews-slide-1:checked ~ .slider__controls label[for="reviews-slide-1"],
+#reviews-slide-2:checked ~ .slider__controls label[for="reviews-slide-2"],
+#reviews-slide-3:checked ~ .slider__controls label[for="reviews-slide-3"],
+#prices-slide-1:checked ~ .slider__controls label[for="prices-slide-1"],
+#prices-slide-2:checked ~ .slider__controls label[for="prices-slide-2"],
+#prices-slide-3:checked ~ .slider__controls label[for="prices-slide-3"] {
     background-color: #ffffff;
     box-shadow: 0 0 0 3px $dark-blue;
 }

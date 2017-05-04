@@ -1,40 +1,19 @@
 .prices {
-    position: relative;
-    min-height: 470px;
-//    padding: 0 20px;
+//    position: relative;
     padding-top: 90px;
-    box-sizing: border-box;
+    padding-bottom: 99px;
     background: {
         color: $body-bg-second-color;
         image: linear-gradient(to bottom right, #ffffff 50%, transparent 50%);
         size: 100% 22px;
         repeat: no-repeat;
     }
-    
-    &::before {
-        content: "";
-        position: absolute;
-        width: 320px;
-        height: 470px;
-        top: 0;
-        left: -320px;
-        background-color: rgba(0, 255, 0, 0.2);
-    }
-    
-    &::after {
-        content: "";
-        position: absolute;
-        width: 640px;
-        height: 20px;
-        top: 70px;
-        right: -640px;
-        background-color: rgba(255, 255, 0, 0.2);
-    }
+    overflow: hidden;
 }
 .prices__table {
 //    background-color: rgba(0, 255, 0, 0.1);
     border-collapse: collapse;
-    width: 300%;
+    width: 100%;
     background-color: #ffffff;
     
     td {
@@ -45,6 +24,10 @@
     
     td:first-child {
         display: none;
+    }
+    
+    tr:first-child {
+        background-color: $prices-header-bg-color;//фикс для хита, когда ставишь relative для prices-table-header появляется зазор у бордера, причем только в девтулзах 
     }
     
 }
@@ -64,6 +47,32 @@
         display: block;
         font-size: $font-size-medium;
         font-weight: 700;
+    }
+    
+    &--hit {
+        position: relative;
+
+        &::before {
+            content: "Хит";
+            position: absolute;
+            top: 10px;
+            left: -28px;
+            width: 106px;
+            height: 30px;
+            font-size: $font-size-small;
+            line-height: 30px;
+            font-weight: 700;
+            background: {
+                image: 
+                    linear-gradient(45deg, $pink 71.8%, transparent 71.8%),
+                    linear-gradient(135deg, transparent 44.5%, $pink 44.5%);
+                size: 73px 30px, 36px 30px;
+                repeat: no-repeat;
+                position: top right, top left;
+            }
+            transform: rotate(-45deg);
+        }
+
     }
 }
 .prices__table-cell {
@@ -97,33 +106,34 @@
     img[alt="Нет"] {
         margin-right: 2px;
     }
+    
+    &--filter-feature {
+        position: relative;
 
-}
-.prices__cell-wrapper--filter-feature {
-    position: relative;
-    
-    &::before {
-        content: "Розовый фильтр";
-        text-transform: uppercase;
-    }
-    
-}
-.prices__cell-wrapper--smileys-feature {
-    position: relative;
-    
-    &::before {
-        content: "Смайлики";
-        text-transform: uppercase;
-    }
-    
-}
-.prices__cell-wrapper--comments-feature {
-    position: relative;
-    
-    &::before {
-        content: "Комментарии";
-        text-transform: uppercase;
-    }
-    
-}
+        &::before {
+            content: "Розовый фильтр";
+            text-transform: uppercase;
+        }
 
+    }
+
+    &--smileys-feature {
+        position: relative;
+
+        &::before {
+            content: "Смайлики";
+            text-transform: uppercase;
+        }
+
+    }
+    
+    &--comments-feature {
+        position: relative;
+
+        &::before {
+            content: "Комментарии";
+            text-transform: uppercase;
+        }
+
+    }
+}

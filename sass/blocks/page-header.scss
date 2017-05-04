@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     width: 320px;//временно
-    height: 733px;
+    min-height: 733px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
     background: {
         color: $mobile-page-header-bg;
         image: 
@@ -11,6 +13,7 @@
         position: left 176px, center 0;
         repeat: no-repeat;
     }
+    
 }
 .page-header__logo {
     position: fixed;
@@ -19,50 +22,49 @@
     left: 50%;//временно
     margin-left: -140px;//временно
     z-index: 2;
-}
-.page-header__logo img {
-    width: 75px;
-    height: 23px;
+    
+    svg {
+        fill: #fff;
+        width: 75px;
+        height: 23px;
+    }
 }
 .page-header__download-section {
     align-self: flex-end;
-//    margin: 0 auto;//можно убрать, заменил флекс центровкой
     padding: 0 20px;//заменить миксином
-    margin-bottom: 30px;
-//    background-color: red;//временно
 }
 .page-header__download-links {
     display: flex;
     justify-content: space-between;
-    min-height: 56px;
     margin: 32px 37px 25px;
     padding: 0;
     list-style: none;
 }
 .page-header__download-link {
-    
-    a {
-        display: block;
-        height: 100%;
-        font-size: 0;
-        background: {
-            size: contain;
-            repeat: no-repeat;
-            position: center;
-        }
+    display: block;
+    height: 56px;
+    font-size: 0;
+    background: {
+        size: contain;
+        repeat: no-repeat;
+        position: bottom;
     }
-}
-.page-header__apple-store-link {
-    width: 47px;
-    background-image: url(../img/logo-apple.svg);
-}
-.page-header__android-store-link {
-    width: 43px;
-    background-image:  url(../img/logo-android.svg);
-}
-.page-header__windows-store-link {
-    width: 44px;
-    background-image: url(../img/logo-microsoft.svg);
+    
+    &--apple {
+        width: 47px;
+        background-image: url(../img/logo-apple.svg);
+    }
+    
+    &--android {
+        width: 43px;
+        background-image:  url(../img/logo-android.svg);
+    }
+    
+    &--windows {
+        width: 44px;
+        background-image: url(../img/logo-microsoft.svg);
+        background-position: center 12px;
+    }
 }
 .page-header__download-text {
     margin: 0;
