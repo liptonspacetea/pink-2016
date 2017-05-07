@@ -13,10 +13,6 @@
         fill: $dark-blue;
         width: 147px;
         height: 40px;
-        
-        &:hover {
-            fill: $pink;
-        }
     }
 }
 .page-footer__social-links {
@@ -42,12 +38,16 @@
         fill: $pink;
     }
     
-    &:hover {
-        border-color: $dark-blue;
-    }
+//    &:hover {
+//        border-color: $dark-blue;
+//    }
+//    
+//    &:active {
+//        opacity: 0.1;
+//    }
     
     &:active {
-        opacity: 0.1;
+        border-color: $dark-blue;
     }
     
     &--twitter {
@@ -92,12 +92,16 @@
         width: 27px;
         height: 34px;
         
-        &:hover {
-            fill: $dark-blue;
-        }
+//        &:hover {
+//            fill: $dark-blue;
+//        }
+//        
+//        &:active {
+//            opacity: 0.3;
+//        }
         
         &:active {
-            opacity: 0.3;
+            fill: $dark-blue;
         }
     }
 }

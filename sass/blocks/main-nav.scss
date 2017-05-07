@@ -1,9 +1,9 @@
 .main-nav {
     position: fixed;
     top: 0;
-    z-index: 1;
-    width: inherit;
-//    width: 100%;
+    z-index: 10;
+//    width: inherit;
+    width: 100%;
     min-height: 70px;
     background-color: rgba(0, 0, 0, 0.3);
 //    background-color: transparent;
@@ -40,22 +40,31 @@
         bottom: 0;
     }
     
-    &:hover::before,
-    &:hover::after {
-        background-color: $pink;
-    }
-    
-    &:hover::before {
-        box-shadow: 0 10px 0 $pink;
-    }
+//    &:hover::before,
+//    &:hover::after {
+//        background-color: $pink;
+//    }
+//    
+//    &:hover::before {
+//        box-shadow: 0 10px 0 $pink;
+//    }
+//    
+//    &:active::before,
+//    &:active::after {
+//        background-color: #431120;
+//    }
+//    
+//    &:active::before {
+//        box-shadow: 0 10px 0 #431120;
+//    }
     
     &:active::before,
     &:active::after {
-        background-color: #431120;
+        background-color: $pink;
     }
     
     &:active::before {
-        box-shadow: 0 10px 0 #431120;
+        box-shadow: 0 10px 0 $pink;
     }
     
 }
@@ -83,34 +92,31 @@
     background-color: $menu-bg-color;
     border-top: 1px solid #000000;
     transition: transform 0.4s;
-}
-.main-nav__item {
-    font-weight: 700;
     
-    &:first-child {
+    li:first-child {
         box-shadow: 0 -1px 0 #000000;
     }
+}
+.main-nav__item {
+    display: block;
+    padding: 15px;
+    font-size: $font-size-medium;
+    font-weight: 700;
+    line-height: 32px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid #000000;
     
     &:active {
-        transform: scale(0.9);
+        color: $pink;
     }
     
-    a {
-        display: block;
-        padding: 15px;
-        font-size: $font-size-medium;
-        line-height: 32px;
-        color: #ffffff;
-        text-align: center;
-        text-transform: uppercase;
-        text-decoration: none;
-        border-top: 1px solid #485461;
-        border-bottom: 1px solid #000000;
+    &--current {
         cursor: default;
-    }
-    
-    a[href] {
-        cursor: pointer;
+        opacity: 0.1;
     }
 }
 #main-nav-checkbox:checked ~ .main-nav__items {

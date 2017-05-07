@@ -16,12 +16,36 @@
     font-size: $font-size-medium;
 }
 .feedback__link {
+    position: relative;
     display: block;
     margin-bottom: 25px;
     font-size: $font-size-big;
     font-weight: 300;
     color: $text-color-link;
     text-decoration: none;
+//    background: rgba(255, 255, 0, 0.2);
+    
+    &:active {
+        color: $dark-blue;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            height: 1px;
+            width: 240px;
+            background-color: $dark-blue;
+        }
+        
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            height: 1px;
+            width: 60px;
+            background-color: #fff;
+        }
+    }
 }
 .feedback__text {
     margin: 0;
