@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     z-index: 10;
-//    width: inherit;
-    width: 100%;
+    width: inherit;
+//    width: 100%;
     min-height: 70px;
     background-color: rgba(0, 0, 0, 0.3);
 //    background-color: transparent;
@@ -121,5 +121,25 @@
 }
 #main-nav-checkbox:checked ~ .main-nav__items {
     transform: translateY(330px);
+}
+
+@media ($tablet-width) {
+    
+    .main-nav {
+        min-height: 110px;
+    }
+    
+    .main-nav__toggle {
+        top: 44px;
+    }
+    
+    .main-nav__items {
+        top: -370px;
+        padding-top: 110px;
+    }
+    
+    #main-nav-checkbox:checked ~ .main-nav__items {
+        transform: translateY(370px);
+    }
 }
 

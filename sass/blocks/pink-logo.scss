@@ -1,0 +1,37 @@
+.pink-logo {
+    position: absolute;
+    top: -17px;
+    left: -72px;
+    fill: #ffffff;
+    
+    &:hover {
+        fill: $pink;
+    }
+    
+    &--footer {
+        position: static;
+//        fill: red;
+        fill: $dark-blue;
+    }
+}
+.pink-logo__glasses,
+.pink-logo__glasses-tablet,
+.pink-logo__stars {
+    display: none;
+}
+.pink-logo__glasses-tablet--footer {
+    display: block;
+    fill: $pink;
+}
+
+@media ($tablet-width) {
+    
+    .pink-logo {
+        position: static;
+    }
+    
+    .pink-logo__glasses-tablet {
+        display: block;
+    }
+}
+
