@@ -27,12 +27,23 @@
 .page-header__download-section {
     align-self: flex-end;
     padding: 0 20px;//заменить миксином
+    background-color: red;
+}
+.page-header__download-title {
+//    font-size: 0;
+//    line-height: 0;
+    display: none;
+    background-color: greenyellow;
+}
+.page-header__download-btn {
+    margin-bottom: 32px;
 }
 .page-header__download-links {
     display: flex;
     justify-content: space-between;
-    margin: 32px 37px 25px;
-    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0 37px;
     list-style: none;
 }
 .page-header__download-link {
@@ -53,6 +64,7 @@
     &--android {
         width: 43px;
         background-image:  url(../img/logo-android.svg);
+        background-position: center 6px;
     }
     
     &--windows {
@@ -73,22 +85,66 @@
 @media ($tablet-width) {
     
     .page-header {
+        justify-content: flex-start;
         min-height: 730px;
+        padding-bottom: 110px;
         background: {
             color: $mobile-page-header-bg;
             image: 
                 url(../img/iphone-hand-tablet@1x.png), 
                 url(../img/bg-back-tablet@1x.jpg);
-            position: left bottom, center 0;
+            position: center bottom, center 0;
             repeat: no-repeat;
         }
     }
     
     .page-header__logo {
         top: 27px;
-//        left: 40px;
-        margin-left: -227px;//временно
+        left: 40px;
+        margin-left: 325px;//временно
         width: 150px;
         height: 40px;
+    }
+    
+    .page-header__download-section {
+        width: 300px;
+        padding: 0 40px;
+    }
+    
+    .page-header__download-title {
+        display: block;
+        margin: 0;
+        margin-bottom: 34px;
+        padding: 0 50px;
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 47px;
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .page-header__download-btn {
+        margin-bottom: 46px;
+    }
+    
+    .page-header__download-links {
+        padding-left: 46px;
+        padding-right: 49px;
+        margin-bottom: 36px;
+        background-color: greenyellow;
+    }
+    
+    .page-header__download-text {
+        font-size: $font-size-medium;
+        background-color: greenyellow;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 6px;
+            width: 100%;
+            background: #000;
+        }
     }
 }

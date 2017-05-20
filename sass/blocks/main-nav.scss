@@ -90,7 +90,7 @@
     width: 100%;
     list-style: none;
     background-color: $menu-bg-color;
-    border-top: 1px solid #000000;
+//    border-top: 1px solid #000000;//зачем тут бордер?
     transition: transform 0.4s;
     
     li:first-child {
@@ -131,6 +131,7 @@
     
     .main-nav__toggle {
         top: 44px;
+        right: 40px;
     }
     
     .main-nav__items {
