@@ -40,32 +40,32 @@
         bottom: 0;
     }
     
-//    &:hover::before,
-//    &:hover::after {
-//        background-color: $pink;
-//    }
-//    
-//    &:hover::before {
-//        box-shadow: 0 10px 0 $pink;
-//    }
-//    
-//    &:active::before,
-//    &:active::after {
-//        background-color: #431120;
-//    }
-//    
-//    &:active::before {
-//        box-shadow: 0 10px 0 #431120;
-//    }
-    
-    &:active::before,
-    &:active::after {
+    &:hover::before,
+    &:hover::after {
         background-color: $pink;
     }
     
-    &:active::before {
+    &:hover::before {
         box-shadow: 0 10px 0 $pink;
     }
+    
+    &:active::before,
+    &:active::after {
+        background-color: #431120;
+    }
+    
+    &:active::before {
+        box-shadow: 0 10px 0 #431120;
+    }
+    
+//    &:active::before,
+//    &:active::after {
+//        background-color: $pink;
+//    }
+//    
+//    &:active::before {
+//        box-shadow: 0 10px 0 $pink;
+//    }
     
 }
 #main-nav-checkbox:checked ~ .main-nav__toggle {
@@ -132,6 +132,7 @@
     .main-nav__toggle {
         top: 44px;
         right: 40px;
+//        right: 5.7%;
     }
     
     .main-nav__items {

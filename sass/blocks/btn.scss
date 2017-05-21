@@ -13,19 +13,19 @@
     color: #ffffff;
     border: 3px solid #ffffff;
     
-//    &:hover {
-//        color: $pink;
-//        background-color: #ffffff;
-//    }
-//    
-//    &:active {
-//        color: rgba(210, 40, 86, 0.3);
-//        transform: scale(0.9);
-//    }
-    
-    &:active {
+    &:hover {
         color: $pink;
         background-color: #ffffff;
+    }
+    
+    &:active {
+        color: rgba(210, 40, 86, 0.3);
         transform: scale(0.9);
     }
+    
+//    &:active {
+//        color: $pink;
+//        background-color: #ffffff;
+//        transform: scale(0.9);
+//    }
 }

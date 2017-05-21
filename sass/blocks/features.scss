@@ -1,5 +1,4 @@
 .features {
-    position: relative;
     padding: 80px 20px 320px;
     background: {
         color: $body-bg-second-color;
@@ -11,6 +10,7 @@
 }
 .features__item {
     margin-bottom: 32px;
+    text-align: center;
     
     &:last-child {
         margin-bottom: 0;
@@ -21,11 +21,64 @@
         margin-bottom: 12px;
         font-size: $font-size-medium;
         color: #000000;
-        text-align: center;
     }
     
     p {
         margin: 0;
-        text-align: center;
+    }
+}
+
+@media ($tablet-width) {
+    
+    .features {
+        min-height: 486px;
+        box-sizing: border-box;
+        padding: 0;
+        padding-top: 74px;
+        background: {
+            image: url(../img/iphone-screen-3-tablet@1x.png), linear-gradient(to bottom right, #ffffff 50%, transparent 50%);
+            size: 268px 481px, 100% 55px;
+            position: 40px 5px, right top;
+            repeat: no-repeat;
+        }
+    }
+    
+    .features__item {
+        margin-bottom: 34px;
+        padding-left: 350px;
+        padding-right: 5.7%;
+        text-align: left;  
+        
+        &--science {
+            min-height: 335px;
+            box-sizing: border-box;
+            margin-top: 44px;
+            padding-top: 100px;
+            background-color: #fff;
+            background: {
+                color: #ffffff;
+                image: url(../img//timer-new.svg);
+                size: 240px 277px;
+                position: 40px bottom;
+                repeat: no-repeat;
+            }
+            
+            h3 {
+                font-size: 30px;
+                line-height: 36px;
+            }
+            
+            p {
+                margin-bottom: 10px;
+            }
+            
+            a {
+                color: $text-color-link;
+                
+                &:hover {
+                    color: $dark-blue;
+                }
+            }
+        }
     }
 }

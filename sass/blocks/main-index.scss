@@ -1,25 +1,40 @@
 .main-index {
-//    min-height: 3437px;//временно upd: плюсанул height на 1k
+//    padding-top: 40px;
 }
 .main-index__header {
-    position: relative;
+//    position: relative;
     padding: 0 20px;//заменить миксином
-    
-    h2 {
-        margin: 0;
-        font-weight: 300;
-        font-size: 24px;
-        text-align: center;
-        line-height: 28px;
+    padding-top: 40px;
+    margin-bottom: 31px;
+}
+.main-index__title {
+    margin: 0;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    line-height: 28px;
        
+    &:first-child {
+        margin-bottom: 34px;
+    }
+}
+@media ($tablet-width) {
+    
+    .main-index__header {
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .main-index__title {
+        font-size: 40px;
+        line-height: 46px;
+        
         &:first-child {
-            margin-top: 40px;
-            margin-bottom: 34px;
+            margin-bottom: 0;
         }
         
         &:last-child {
-            margin-bottom: 31px;
+            padding: 0 25%;
         }
     }
-    
 }
