@@ -1,3 +1,5 @@
+"use strict";
+
 var wrapper = document.querySelector(".slider__wrapper");
 var wrapperPrices = document.querySelector(".slider__wrapper--prices");
 var btnLeftReviews = document.querySelector(".slider__btn--left");
@@ -166,5 +168,4 @@ pricesSliderController3.addEventListener("click", function(event) {
     pricesSliderController2.classList.remove("slider__controller--current");
     pricesSliderController3.classList.add("slider__controller--current");
 });
-
 

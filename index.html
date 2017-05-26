@@ -92,17 +92,19 @@
             <h2 class="main-index__title">Нам есть, что вам предложить!</h2>
         </div>
         <div class="features">
-            <div class="features__item">
-                <h3>Поднимает настроение</h3>
-                <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </div>
-            <div class="features__item">
-                <h3>Меняет мир вокруг</h3>
-                <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </div>
-            <div class="features__item">
-                <h3>Заводит новых друзей</h3>
-                <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <div class="features__wrapper">
+                <div class="features__item">
+                    <h3>Поднимает настроение</h3>
+                    <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                </div>
+                <div class="features__item">
+                    <h3>Меняет мир вокруг</h3>
+                    <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                </div>
+                <div class="features__item">
+                    <h3>Заводит новых друзей</h3>
+                    <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+                </div>
             </div>
             <div class="features__item features__item--science">
                 <h3>Эффект<br> на 24 часа!</h3>
@@ -120,18 +122,21 @@
                 <div class="slider__wrapper slider__wrapper--reviews">
                     <div class="reviews__item slider__slide slider__slide--slide-1">
                         <b class="reviews__comment-author">Николай Петров</b>
+                        <span class="reviews__comment-author-information">25 лет, водитель трамвая</span>
                         <p class="reviews__comment-text">
                             "Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!"
                         </p>
                     </div>
                     <div class="reviews__item slider__slide slider__slide--slide-2">
                         <b class="reviews__comment-author">Аристарх Николаев</b>
+                        <span class="reviews__comment-author-information">28 лет, архитектор</span>
                         <p class="reviews__comment-text">
                             "Николай Петров увел у меня жену с помощью этого приложения, но оно настолько потрясающее, что я не держу на них зла и желаю им счастья!"
                         </p>
                     </div>
                     <div class="reviews__item slider__slide slider__slide--slide-3">
                         <b class="reviews__comment-author">Альбина Николаева-Петрова</b>
+                        <span class="reviews__comment-author-information">26 лет, орнитолог</span>
                         <p class="reviews__comment-text">
                             "Это приложение полностью изменило мою жизнь! У меня были ужасные отношения с мужем, но с помощью Pink я нашла нового и прекрасно общаюсь со старым!"
                         </p>
@@ -149,8 +154,8 @@
                 <input type="radio" name="prices-slider" id="prices-slide-1" checked>
                 <input type="radio" name="prices-slider" id="prices-slide-2">
                 <input type="radio" name="prices-slider" id="prices-slide-3">
-                <div class="slider__btn slider__btn--left"></div>
-                <div class="slider__btn slider__btn--right"></div>
+                <div class="slider__btn slider__btn--left slider__btn--prices"></div>
+                <div class="slider__btn slider__btn--right slider__btn--prices"></div>
                 <div class="slider__wrapper slider__wrapper--prices">
                     <table class="prices__table">
                         <tr>
@@ -226,12 +231,18 @@
             <h2 class="feedback__main-title">
                 Остались вопросы? Свяжитесь с нами!
             </h2>
-            <b class="feedback__title">Звоните:</b>
-            <a class="feedback__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
-            <b class="feedback__title">Пишите:</b>
-            <a class="feedback__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            <b class="feedback__title">Приезжайте в гости:</b>
-            <p class="feedback__text">ул. Большая Конюшенная, 19/8</p>
+            <div class="feedback__phone">
+                <b class="feedback__title">Звоните:</b>
+                <a class="feedback__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </div>
+            <div class="feedback__mail">
+                <b class="feedback__title">Пишите:</b>
+                <a class="feedback__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </div>
+            <div class="feedback__address">
+                <b class="feedback__title feedback__title--address">Приезжайте в гости:</b>
+                <p class="feedback__text">ул. Большая Конюшенная, 19/8</p>
+            </div>
             <div class="feedback__map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d856.6468773458968!2d30.32264464360611!3d59.938660726886035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1493489227584" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>

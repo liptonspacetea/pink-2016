@@ -16,6 +16,10 @@
         margin-bottom: 0;
     }
     
+    &--science {
+        display: none;
+    }
+    
     h3 {
         margin: 0;
         margin-bottom: 12px;
@@ -31,7 +35,7 @@
 @media ($tablet-width) {
     
     .features {
-        min-height: 486px;
+//        min-height: 821px;
         box-sizing: border-box;
         padding: 0;
         padding-top: 74px;
@@ -43,8 +47,17 @@
         }
     }
     
+    .features__wrapper {
+        min-height: 412px;
+//        margin-bottom: 44px;
+//        background: red;
+//        opacity: 0.6;
+    }
+    
     .features__item {
         margin-bottom: 34px;
+        margin-bottom: 4.9%;
+//        background: red;
         padding-left: 350px;
         padding-right: 5.7%;
         text-align: left;  
@@ -52,7 +65,7 @@
         &--science {
             min-height: 335px;
             box-sizing: border-box;
-            margin-top: 44px;
+//            margin-top: 44px;
             padding-top: 100px;
             background-color: #fff;
             background: {

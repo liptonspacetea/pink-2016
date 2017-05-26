@@ -31,7 +31,7 @@
 //    display: flex;
     width: 300%;
     transition: transform 0.4s;
-//    background-color: rgba(255, 0, 0, 0.2);
+//    background-color: rgba(255, 0, 0, 0.9);
     
     &--show-slide-1 {
         transform: translateX(0);
@@ -86,7 +86,7 @@
     align-items: center;
     transform: translateX(-50%);
     min-width: 56px;
-//    background-color: rgba(0, 255, 0, 0.2);
+//    background-color: rgba(0, 255, 0, 0.9);
     
     &--reviews {
         bottom: -44px;
@@ -153,6 +153,30 @@
 #prices-slide-3:checked ~ .slider__controls label[for="prices-slide-3"] {
     background-color: #ffffff;
     box-shadow: 0 0 0 3px $dark-blue;
+}
+
+@media ($tablet-width) {
+    
+    .slider__wrapper--prices {
+        transform: translateX(0);
+        width: 100%;
+    }
+    
+    .slider__controls--prices {
+        display: none;
+    }
+    
+    .slider__btn--prices {
+        display: none;
+    }
+    
+    #prices-slide-2:checked ~ .slider__wrapper--prices {
+    transform: translateX(0);
+    }
+    
+    #prices-slide-3:checked ~ .slider__wrapper--prices {
+        transform: translateX(0);
+    }
 }
     
 

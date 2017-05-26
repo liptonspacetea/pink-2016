@@ -1,5 +1,4 @@
 .prices {
-//    position: relative;
     padding-top: 90px;
     padding-bottom: 99px;
     background: {
@@ -72,7 +71,6 @@
             }
             transform: rotate(-45deg);
         }
-
     }
 }
 .prices__table-cell {
@@ -108,7 +106,7 @@
     }
     
     &--filter-feature {
-        position: relative;
+//        position: relative;//зачем?
 
         &::before {
             content: "Розовый фильтр";
@@ -118,7 +116,7 @@
     }
 
     &--smileys-feature {
-        position: relative;
+//        position: relative;//зачем?
 
         &::before {
             content: "Смайлики";
@@ -128,12 +126,99 @@
     }
     
     &--comments-feature {
-        position: relative;
+//        position: relative;//зачем?
 
         &::before {
             content: "Комментарии";
             text-transform: uppercase;
         }
 
+    }
+}
+
+@media ($tablet-width) {
+    
+    .prices {
+        padding-bottom: 68px;
+        padding-left: 40px;
+        padding-right: 40px;
+//        padding-left: 5.7%;
+//        padding-right: 5.7%;
+        background-size: 100% 55px;
+    }
+    
+    .prices__table {
+        
+        td {
+            width: 25%;
+        }
+        
+        td:first-child {
+            display: table-cell;
+            padding-left: 16px;
+        }
+    }
+    
+    .prices__hidden-cell {
+        background-color: $body-bg-second-color;
+        border: 2px solid $body-bg-second-color;;
+        border-right-color: $prices-header-bg-color;
+        border-bottom-color: $prices-border-color;
+        display: none;
+    }
+    
+    .prices__table-header {
+        height: 74px;
+        font-size: $font-size-medium;
+        
+        b {
+            font-size: 16px;
+        }
+        
+        &--hit {
+            
+            &::before {
+                top: 3px;
+                left: -35px;
+                width: 106px;
+//                height: 28px;
+//                line-height: 28px;
+                background: {
+//                    color: red;
+//                    image: 
+//                    linear-gradient(45deg, $pink 37.5px, transparent 37.5px),
+//                    linear-gradient(135deg, transparent 30px, $pink 30px);
+                image: 
+                    linear-gradient(45deg, $pink 57.8%, transparent 57.8%),
+                    linear-gradient(135deg, transparent 56%, $pink 56%);
+                size: 63px 30px, 46px 30px;
+                repeat: no-repeat;
+                position: top right, top left;
+            }
+            }
+            
+            &::after {
+                content: "";
+                position: absolute;
+                top: -2px;
+                left: 0;
+                height: 19px;
+                width: 19px;
+//                background: #000;
+            }
+        }
+    }
+    
+    .prices__table-cell {
+        height: 43px;
+    }
+    
+    .prices__cell-wrapper {
+        justify-content: center;
+        padding: 0;
+        
+        &::before {
+            display: none;
+        }
     }
 }
