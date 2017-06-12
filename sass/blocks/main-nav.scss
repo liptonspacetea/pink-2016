@@ -2,11 +2,9 @@
     position: fixed;
     top: 0;
     z-index: 10;
-    width: inherit;
-//    width: 100%;
+    width: 100%;
     min-height: 70px;
     background-color: rgba(0, 0, 0, 0.3);
-//    background-color: transparent;
     
     input[type="checkbox"] {
         display: none;
@@ -32,6 +30,7 @@
         background-color: #ffffff;
         transition: 0.4s;
     }
+    
     &::before {
         box-shadow: 0 10px 0 #ffffff;
     }
@@ -40,32 +39,15 @@
         bottom: 0;
     }
     
-    &:hover::before,
-    &:hover::after {
-        background-color: $pink;
-    }
-    
-    &:hover::before {
-        box-shadow: 0 10px 0 $pink;
-    }
-    
     &:active::before,
     &:active::after {
-        background-color: #431120;
+        background-color: $pink;
+        opacity: 0.3;
     }
     
     &:active::before {
-        box-shadow: 0 10px 0 #431120;
+        box-shadow: 0 10px 0 $pink;
     }
-    
-//    &:active::before,
-//    &:active::after {
-//        background-color: $pink;
-//    }
-//    
-//    &:active::before {
-//        box-shadow: 0 10px 0 $pink;
-//    }
     
 }
 #main-nav-checkbox:checked ~ .main-nav__toggle {
@@ -90,7 +72,6 @@
     width: 100%;
     list-style: none;
     background-color: $menu-bg-color;
-//    border-top: 1px solid #000000;//зачем тут бордер?
     transition: transform 0.4s;
     
     li:first-child {
@@ -112,11 +93,17 @@
     
     &:active {
         color: $pink;
+        opacity: 0.3;
     }
     
     &--current {
         cursor: default;
         opacity: 0.1;
+        
+        &:active {
+            color: #ffffff;
+            opacity: 0.1;
+        }
     }
 }
 #main-nav-checkbox:checked ~ .main-nav__items {
@@ -132,7 +119,6 @@
     .main-nav__toggle {
         top: 44px;
         right: 40px;
-//        right: 5.7%;
     }
     
     .main-nav__items {
@@ -142,6 +128,95 @@
     
     #main-nav-checkbox:checked ~ .main-nav__items {
         transform: translateY(370px);
+    }
+}
+
+@media ($desktop-width) {
+    
+    .main-nav {
+        position: static;
+//        align-self: flex-start;
+    }
+    
+    .main-nav__toggle {
+        display: none;
+    }
+    
+    #main-nav-checkbox:checked ~ .main-nav__items {
+        transform: translateY(0);
+    }
+    
+    .main-nav__items {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 940px;
+        margin: 0 auto;
+        padding-top: 45px;
+        padding-left: 320px;
+        box-sizing: border-box;
+        background-color: transparent;
+        transition: none;
+        
+        li:first-child {
+            box-shadow: none;
+        }
+    }
+    
+    .main-nav__item {
+        position: relative;
+        display: block;
+        padding: 0;
+        font-weight: 400;
+        line-height: 18px;
+        text-transform: none;
+        text-decoration: none;
+        border: none;
+        
+        &:hover {
+            
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #ffffff;
+                bottom: -14px;
+            }
+        }
+
+        &:active {
+            color: #ffffff;
+            opacity: 0.3;
+            
+            &::before {
+                content: none;
+            }
+        }
+
+        &--current {
+            cursor: default;
+            opacity: 1;
+            
+            &:hover {
+                color: $pink;
+                
+                &::before {
+                    background-color: $pink;
+                }
+            }
+
+        
+            &:active {
+            color: #ffffff;
+            opacity: 0.3;
+            
+                &::before {
+                    content: none;
+                }
+            }
+        }
     }
 }
 

@@ -6,12 +6,13 @@
 }
 .reviews__item {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 2%;
     box-sizing: border-box;
 }
 
 .reviews__comment-author {
     display: block;
+    color: #000000;
     font-size: $font-size-medium;
     line-height: 30px;
     margin-bottom: 15px;
@@ -34,8 +35,7 @@
     .reviews__item {
         display: flex;
         flex-direction: column;
-        padding: 0 40px;
-//        padding: 0 1.9%;
+        padding: 0 1.9%;
     }
     
     .reviews__comment-author {
@@ -53,5 +53,50 @@
     .reviews__comment-text {
         margin-bottom: 36px;
         font-size: $font-size-medium;
+    }
+}
+
+@media ($desktop-width) {
+    
+    .reviews {
+        position: relative;
+        padding-top: 186px;
+        padding-bottom: 42px;
+        width: 940px;
+        margin: 0 auto;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 72px;
+            left: 433px;
+            height: 63px;
+            width: 79px;
+            background: {
+                image: url("../img/icon-quotes.svg");
+                repeat: no-repeat;//потом убрать
+            }
+        }
+        
+        &--no-js {
+            padding-bottom: 80px;
+        }
+    }
+    
+    .reviews__item {
+        padding: 0;
+    }
+    
+    .reviews__comment-author {
+        font-size: $font-size-big;
+    }
+    
+    
+    .reviews__comment-author-information {
+        font-size: $font-size-medium;
+    }
+    
+    .reviews__comment-text {
+        padding: 0 100px;
     }
 }

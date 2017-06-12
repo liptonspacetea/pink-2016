@@ -1,19 +1,22 @@
 .pink-logo {
-    position: absolute;
-    top: -17px;
-    left: -72px;
-    fill: #ffffff;
     
-    &:hover {
-        fill: $pink;
+    &--header {
+        position: absolute;
+        top: -17px;
+        left: -72px;
+        fill: #ffffff;
     }
     
     &--footer {
         position: static;
         fill: $dark-blue;
     }
+    
+    &:active {
+        opacity: 0.3;
+    }
 }
-.pink-logo__glasses,
+.pink-logo__glasses-desktop,
 .pink-logo__glasses-tablet,
 .pink-logo__stars {
     display: none;
@@ -25,12 +28,63 @@
 
 @media ($tablet-width) {
     
-    .pink-logo {
+    .pink-logo--header {
         position: static;
     }
     
     .pink-logo__glasses-tablet {
         display: block;
+    }
+}
+
+@media ($desktop-width) {
+    
+    .pink-logo {
+        
+        &:hover {
+            fill: $pink;
+            
+            .pink-logo__stars--footer {
+                fill: $pink;
+            }
+        }
+        
+        &--header:active {
+            fill: #fff;
+        }
+        
+        &--footer:active {
+            fill: $dark-blue;
+            
+            .pink-logo__stars--footer {
+                fill: $dark-blue;
+            }
+        }
+    }
+    
+    .pink-logo__glasses-tablet {
+        display: none;
+    }
+    
+    .pink-logo__glasses-desktop {
+        display: block;
+        
+        &--footer {
+            fill: $pink;
+        }
+    }
+    
+    .pink-logo__stars {
+        display: block;
+        fill: $pink;
+        
+        &--footer {
+            fill: $dark-blue;
+            
+            path:nth-child(4) {
+                fill: $pink;
+            }
+        }
     }
 }
 

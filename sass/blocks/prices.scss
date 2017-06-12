@@ -10,15 +10,12 @@
     overflow: hidden;
 }
 .prices__table {
-//    background-color: rgba(0, 255, 0, 0.1);
     border-collapse: collapse;
     width: 100%;
     background-color: #ffffff;
     
     td {
-//        width: 33.3%;
         line-height: 30px;
-//        text-align: center;
     }
     
     td:first-child {
@@ -36,7 +33,7 @@
     font-weight: 300;
     color: #ffffff;
     text-transform: uppercase;
-    text-align: center;//перевесить на td?
+    text-align: center;
     background-color: $prices-header-bg-color;
     border: 2px solid $prices-header-bg-color;
     border-left-color: $prices-border-color;
@@ -95,7 +92,6 @@
     align-items: center;
     padding-left: 20px;
     padding-right: 17px;
-//    background-color: rgba(255, 255, 0, 0.2);
     
     img {
         flex-shrink: 0;
@@ -106,7 +102,6 @@
     }
     
     &--filter-feature {
-//        position: relative;//зачем?
 
         &::before {
             content: "Розовый фильтр";
@@ -116,7 +111,6 @@
     }
 
     &--smileys-feature {
-//        position: relative;//зачем?
 
         &::before {
             content: "Смайлики";
@@ -126,7 +120,6 @@
     }
     
     &--comments-feature {
-//        position: relative;//зачем?
 
         &::before {
             content: "Комментарии";
@@ -140,10 +133,8 @@
     
     .prices {
         padding-bottom: 68px;
-        padding-left: 40px;
-        padding-right: 40px;
-//        padding-left: 5.7%;
-//        padding-right: 5.7%;
+        padding-left: 5.7%;
+        padding-right: 5.7%;
         background-size: 100% 55px;
     }
     
@@ -155,7 +146,6 @@
         
         td:first-child {
             display: table-cell;
-            padding-left: 16px;
         }
     }
     
@@ -171,6 +161,10 @@
         height: 74px;
         font-size: $font-size-medium;
         
+        &:last-child {
+            border-right-color: $prices-header-bg-color;
+        }
+        
         b {
             font-size: 16px;
         }
@@ -181,36 +175,24 @@
                 top: 3px;
                 left: -35px;
                 width: 106px;
-//                height: 28px;
-//                line-height: 28px;
                 background: {
-//                    color: red;
-//                    image: 
-//                    linear-gradient(45deg, $pink 37.5px, transparent 37.5px),
-//                    linear-gradient(135deg, transparent 30px, $pink 30px);
-                image: 
-                    linear-gradient(45deg, $pink 57.8%, transparent 57.8%),
-                    linear-gradient(135deg, transparent 56%, $pink 56%);
-                size: 63px 30px, 46px 30px;
-                repeat: no-repeat;
-                position: top right, top left;
-            }
-            }
-            
-            &::after {
-                content: "";
-                position: absolute;
-                top: -2px;
-                left: 0;
-                height: 19px;
-                width: 19px;
-//                background: #000;
+                    image: 
+                        linear-gradient(45deg, $pink 57%, transparent 57%),
+                        linear-gradient(135deg, transparent 56%, $pink 56%);
+                    size: 63px 30px, 46px 30px;
+                    repeat: no-repeat;
+                    position: top right, top left;
+                }
             }
         }
     }
     
     .prices__table-cell {
         height: 43px;
+        
+        &:first-child {
+            padding-left: 16px;
+        }
     }
     
     .prices__cell-wrapper {
@@ -219,6 +201,39 @@
         
         &::before {
             display: none;
+        }
+    }
+}
+
+@media ($desktop-width) {
+    
+    .prices {
+        padding: 0;
+        padding-top: 146px;
+        padding-bottom: 96px;
+        background-size: 100% 82px;
+    }
+    
+    .prices__table {
+        width: 940px;
+        margin: 0 auto;
+    }
+    
+    .prices__table-header {
+        height: 92px;
+        font-size: $font-size-big;
+        
+        b {
+            font-size: $font-size-medium;
+        }
+    }
+    
+    .prices__table-cell {
+        height: 57px;
+        
+        &:first-child {
+            padding-left: 24px;
+            font-size: 18px;
         }
     }
 }

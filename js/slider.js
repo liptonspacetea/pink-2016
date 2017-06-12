@@ -1,6 +1,6 @@
 "use strict";
 
-var wrapper = document.querySelector(".slider__wrapper");
+var wrapperReviews = document.querySelector(".slider__wrapper--reviews");
 var wrapperPrices = document.querySelector(".slider__wrapper--prices");
 var btnLeftReviews = document.querySelector(".slider__btn--left");
 var btnLeftPrices = document.querySelector(".prices .slider__btn--left");
@@ -9,7 +9,7 @@ var btnRightPrices = document.querySelector(".prices .slider__btn--right");
 var slide1 = document.querySelector(".slider__slide--slide-1");
 var slide2 = document.querySelector(".slider__slide--slide-2");
 var slide3 = document.querySelector(".slider__slide--slide-3");
-var sliderController = document.querySelectorAll(".slider__controller");
+var reviewsSliderControls = document.querySelector(".slider__controls--reviews");
 var reviewsSliderController1 = document.querySelector("label[for=reviews-slide-1]");
 var reviewsSliderController2 = document.querySelector("label[for=reviews-slide-2]");
 var reviewsSliderController3 = document.querySelector("label[for=reviews-slide-3]");
@@ -18,32 +18,33 @@ var pricesSliderController1 = document.querySelector("label[for=prices-slide-1]"
 var pricesSliderController2 = document.querySelector("label[for=prices-slide-2]");
 var pricesSliderController3 = document.querySelector("label[for=prices-slide-3]");
 var pricesRadioInput1 = document.querySelector("#prices-slide-1");
+var reviews = document.querySelector(".reviews");
 
 reviewsRadioInput1.removeAttribute("checked");
 slide1.classList.add("slider__slide--current");
 btnLeftReviews.classList.add("slider__btn--disable");
 reviewsSliderController1.classList.add("slider__controller--current");
+
 pricesRadioInput1.removeAttribute("checked");
 pricesSliderController1.classList.add("slider__controller--current");
 
-//for (var i = 0; i < sliderController.length; i++) {
-//    sliderController[i].addEventListener("click", function(event) {
-//        event.preventDefault();
-//    })
-//};
+btnLeftReviews.classList.remove("slider__btn--no-js");
+btnRightReviews.classList.remove("slider__btn--no-js");
+reviewsSliderControls.classList.remove("slider__controls--no-js");
+reviews.classList.remove("reviews--no-js");
 
 btnRightReviews.addEventListener("click", function(event) {
    event.preventDefault();
     if (slide1.classList.contains("slider__slide--current")) {
-        wrapper.classList.add("slider__wrapper--show-slide-2");
+        wrapperReviews.classList.add("slider__wrapper--show-slide-2");
         slide1.classList.remove("slider__slide--current");
         slide2.classList.add("slider__slide--current");
         btnLeftReviews.classList.remove("slider__btn--disable");
         reviewsSliderController1.classList.remove("slider__controller--current");
         reviewsSliderController2.classList.add("slider__controller--current");
     } else {
-        wrapper.classList.remove("slider__wrapper--show-slide-2");
-        wrapper.classList.add("slider__wrapper--show-slide-3");
+        wrapperReviews.classList.remove("slider__wrapper--show-slide-2");
+        wrapperReviews.classList.add("slider__wrapper--show-slide-3");
         slide2.classList.remove("slider__slide--current");
         slide3.classList.add("slider__slide--current");
         btnRightReviews.classList.add("slider__btn--disable");
@@ -55,15 +56,15 @@ btnRightReviews.addEventListener("click", function(event) {
 btnLeftReviews.addEventListener("click", function(event) {
    event.preventDefault();
     if (slide3.classList.contains("slider__slide--current")) {
-        wrapper.classList.remove("slider__wrapper--show-slide-3");
-        wrapper.classList.add("slider__wrapper--show-slide-2");
+        wrapperReviews.classList.remove("slider__wrapper--show-slide-3");
+        wrapperReviews.classList.add("slider__wrapper--show-slide-2");
         slide3.classList.remove("slider__slide--current");
         slide2.classList.add("slider__slide--current");
         btnRightReviews.classList.remove("slider__btn--disable");
         reviewsSliderController3.classList.remove("slider__controller--current");
         reviewsSliderController2.classList.add("slider__controller--current");
     } else {
-        wrapper.classList.remove("slider__wrapper--show-slide-2");
+        wrapperReviews.classList.remove("slider__wrapper--show-slide-2");
         slide2.classList.remove("slider__slide--current");
         slide1.classList.add("slider__slide--current");
         btnLeftReviews.classList.add("slider__btn--disable");
@@ -74,8 +75,8 @@ btnLeftReviews.addEventListener("click", function(event) {
 
 reviewsSliderController1.addEventListener("click", function(event) {
     event.preventDefault();
-    wrapper.classList.remove("slider__wrapper--show-slide-2");
-    wrapper.classList.remove("slider__wrapper--show-slide-3");
+    wrapperReviews.classList.remove("slider__wrapper--show-slide-2");
+    wrapperReviews.classList.remove("slider__wrapper--show-slide-3");
     slide2.classList.remove("slider__slide--current");
     slide3.classList.remove("slider__slide--current");
     slide1.classList.add("slider__slide--current");
@@ -88,8 +89,8 @@ reviewsSliderController1.addEventListener("click", function(event) {
 
 reviewsSliderController2.addEventListener("click", function(event) {
     event.preventDefault();
-    wrapper.classList.remove("slider__wrapper--show-slide-3");
-    wrapper.classList.add("slider__wrapper--show-slide-2");
+    wrapperReviews.classList.remove("slider__wrapper--show-slide-3");
+    wrapperReviews.classList.add("slider__wrapper--show-slide-2");
     slide1.classList.remove("slider__slide--current");
     slide3.classList.remove("slider__slide--current");
     slide2.classList.add("slider__slide--current");
@@ -102,8 +103,8 @@ reviewsSliderController2.addEventListener("click", function(event) {
 
 reviewsSliderController3.addEventListener("click", function(event) {
     event.preventDefault();
-    wrapper.classList.remove("slider__wrapper--show-slide-2");
-    wrapper.classList.add("slider__wrapper--show-slide-3");
+    wrapperReviews.classList.remove("slider__wrapper--show-slide-2");
+    wrapperReviews.classList.add("slider__wrapper--show-slide-3");
     slide1.classList.remove("slider__slide--current");
     slide2.classList.remove("slider__slide--current");
     slide3.classList.add("slider__slide--current");

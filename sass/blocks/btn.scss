@@ -8,24 +8,34 @@
     line-height: 18px;
     text-decoration: none;
     border-radius: 60px;
+    
+    &--download-btn {
+        color: #ffffff;
+        border: 3px solid #ffffff;
+        
+        &:active {
+            color: rgba(210, 40, 86, 0.3);
+            background-color: #ffffff;
+            transform: scale(0.9);
+        }
+    }
 }
-.btn--download-btn {
-    color: #ffffff;
-    border: 3px solid #ffffff;
+
+@media ($desktop-width) {
     
-    &:hover {
-        color: $pink;
-        background-color: #ffffff;
+    .btn {
+        font-size: 21px;
+        
+        &--download-btn {
+            
+            &:hover {
+                color: $pink;
+                background-color: #ffffff;
+            }
+            
+            &:active {
+                color: rgba(210, 40, 86, 0.3);
+            }
+        }
     }
-    
-    &:active {
-        color: rgba(210, 40, 86, 0.3);
-        transform: scale(0.9);
-    }
-    
-//    &:active {
-//        color: $pink;
-//        background-color: #ffffff;
-//        transform: scale(0.9);
-//    }
 }
