@@ -1,0 +1,113 @@
+.popup {
+    position: fixed;
+    left: 50%;
+    display: none;
+    width: 320px;
+    padding: 40px 20px 50px;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 24px 1px rgba(0, 0, 0, 0.2);
+    
+    &--fail {
+        top: 100px;
+        background-color: #ffffff;
+    }
+    
+    &--succes {
+        top: 100px;
+        padding-bottom: 52px;
+        background-image: linear-gradient(to top, $body-bg-second-color 163px, #ffffff 163px);
+    }
+    
+}
+.popup__title {
+    margin: 0;
+    margin-bottom: 26px;
+    color: #000000;
+    font-size: $font-size-medium;
+    text-align: center;
+}
+.popup__text {
+    margin: 0;
+    margin-bottom: 38px;
+    text-align: center;
+    
+    &--succes {
+        margin-bottom: 79px;
+    }
+    
+}
+.popup__btn {
+    margin: 0 auto;
+}
+
+//landscape orientation
+
+@media (min-width: 560px) and (max-width: 699px) {
+    
+    .popup {
+        
+        &--fail {
+            top: 30px;
+        }
+        
+        &--succes {
+            top: 0;
+        }
+    }
+}
+
+@media ($tablet-width) {
+    
+    .popup {
+        top: 240px;
+        width: 460px;
+        padding: 36px 70px 52px;
+    }
+    
+    .popup__title {
+        margin-bottom: 22px;
+        font-size: 30px;
+        line-height: 40px;    
+    }
+    
+    .popup__text {
+        font-size: $font-size-medium;
+        
+        &--succes {
+            margin-bottom: 82px;
+        }
+        
+        br {
+            display: none;
+        }
+    }
+}
+
+//iphone 6plus landscape orientation
+
+@media (min-width: 730px) and (max-width: 750px) {
+    
+    .popup {
+        
+        &--fail {
+            top: 40px;
+        }
+        
+        &--succes {
+            top: 0;
+        }
+    }    
+}
+
+@media ($desktop-width) {
+    
+    .popup--succes {
+        width: 780px;
+        padding: 40px 190px 52px;
+    }
+    
+    .popup__text--succes {
+        margin-bottom: 88px;
+    }
+}

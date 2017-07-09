@@ -1,10 +1,7 @@
-.main-index-header {
-    padding: 0 15%;
-    padding-top: 40px;
-    padding-bottom: 31px;
+.page-content-header {
     padding: 40px 15% 31px;
 }
-.main-index-header__title {
+.page-content-header__title {
     margin: 0;
     font-weight: 300;
     font-size: 24px;
@@ -17,11 +14,11 @@
 }
 @media ($tablet-width) {
     
-    .main-index-header {
+    .page-content-header {
         padding: 50px 0;
     }
     
-    .main-index-header__title {
+    .page-content-header__title {
         font-size: 40px;
         line-height: 46px;
         
@@ -37,12 +34,12 @@
 
 @media ($desktop-width) {
     
-    .main-index-header {
+    .page-content-header {
         padding-top: 68px;
         padding-bottom: 78px;
     }
     
-    .main-index-header__title {
+    .page-content-header__title {
         width: 940px;
         margin: 0 auto;
         box-sizing: border-box;

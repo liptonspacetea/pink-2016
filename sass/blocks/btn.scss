@@ -8,16 +8,97 @@
     line-height: 18px;
     text-decoration: none;
     border-radius: 60px;
+    border: 3px solid;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+    &:active {
+        transform: scale(0.9);
+    }
     
     &--download-btn {
         color: #ffffff;
-        border: 3px solid #ffffff;
+        border-color: #ffffff;
         
         &:active {
             color: rgba(210, 40, 86, 0.3);
             background-color: #ffffff;
-            transform: scale(0.9);
         }
+    }
+    
+    &--upload {
+        min-width: 280px;
+        color: $pink;
+        border-color: $pink;
+        
+        &:active {
+            color: rgba(255, 255, 255, 0.3);
+            background-color: $pink;
+        }
+    }
+    
+    &--cancel {
+        min-width: 280px;
+        color: $dark-blue;
+        border-color: $dark-blue;
+        opacity: 0.1;
+        
+        &:active {
+            color: rgba(255, 255, 255, 0.3);
+            background-color: $dark-blue;
+            opacity: 0.3;
+        }
+    }
+    
+    &--form {
+        min-width: 280px;
+        height: 63px;
+        padding: 0;
+        color: #ffffff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 2px;
+        background-color: #2aab6d;
+        
+        &:active {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+        &--disabled {
+            background-color: #e5e5e5;
+        }
+    }
+    
+    &--popup {
+        min-width: 280px;
+        height: 63px;
+        padding: 0;
+        color: #ffffff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 2px;
+        background-color: #2aab6d;
+        
+        &:active {
+            color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+@media ($tablet-width) {
+    
+    .btn--upload,
+    .btn--cancel {
+        min-width: 260px;
+    }
+    
+    .btn--form {
+        min-width: 300px;
+    }
+    
+    .btn--popup {
+        min-width: 300px;
     }
 }
 
@@ -35,6 +116,45 @@
             
             &:active {
                 color: rgba(210, 40, 86, 0.3);
+            }
+        }
+
+        &--upload {
+            min-width: 183px;
+            
+            &:hover {
+                color: #ffffff;
+                background-color: $pink;
+            }
+            
+            &:active {
+                color: rgba(255, 255, 255, 0.3);
+            }
+        }
+        
+        &--cancel {
+            min-width: 183px;
+            
+            &:hover {
+                opacity: 0.3;
+            }
+        }
+        
+        &--form {
+            
+            &:hover {
+                background-color: #1c9b5e;
+            }
+        }
+        
+        &--popup {
+            
+            &:hover {
+                background-color: #1c9b5e;
+            }
+            
+            &--succes {
+                min-width: 460px;
             }
         }
     }
